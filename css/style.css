@@ -1,0 +1,214 @@
+:root{
+    --mainBgColor: #36cdf3;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 18px;
+}
+body{
+    background: linear-gradient(0deg, #85F6B8 100%, #8ED9EBD9 85%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+p{
+    color: gray;
+    font-size: 1rem;
+}
+label{
+    color: gray;
+    font-size: .8rem;
+    cursor: pointer;
+}
+.btn{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: grey;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.btn.success{
+    background-color: green;
+    color: white;
+}.btn.success:disabled{
+    background-color: rgba(100, 158, 100, 0.842);
+}
+.btn.fail{
+    background-color: rgb(253, 121, 45);
+}
+.btn.blue{
+    background-color: #0880D6;
+    color: white;
+    text-decoration: none;
+}
+input{
+    outline: none;
+    border: solid grey 1px;
+    padding: 5px;
+    height: 40px;
+}
+.white_card{
+    width: 40%;
+    height: 600px;
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.white_card .form_subscribe{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.white_card .form_subscribe .form_subscribe_text{
+    height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    align-content: center;
+}
+.white_card .form_subscribe .form_subscribe_form{
+    height: 300px;
+}
+
+.white_card .form_subscribe form .form_input{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* quiz page */
+
+.white_card .form_quiz{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    /* border: solid red; */
+}
+
+.white_card .form_quiz .question{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.white_card .form_quiz .progress_container{
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    /* border: solid red; */
+}
+.white_card .form_quiz .progress_container .progress_container__progress{
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: gray;
+    margin: auto;
+    margin-top: 2px;
+}
+.white_card .form_quiz .progress_container .progress_container__progress .fuel{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: green;
+}
+
+.reponses_items{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.reponses_items .reponses__item{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    border: solid grey 1px;
+    padding: 5px;
+}
+.reponses_items .reponses__item .reponses__item__radio{
+    width: 50px;
+}
+.reponses_items .reponses__item .reponses__item__reponse label{
+    font-size: 20px;
+}
+.reponses_form .actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.reponses_form .actions button{
+    width: 40%;
+}
+
+/* resultat */
+.resultat{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+}
+.resultat_owner{
+    height: 100px;
+    margin-bottom: 50px;
+    width: 70%;
+    text-align: center;
+}
+.resultat_owner h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.resultat_owner p{
+    font-size: 20px;
+    font-weight: 300;
+}
+.resultat_img{
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.resultat_img.success{
+    border: solid #028A3D 5px;
+}
+.resultat_img.fail{
+    border: solid #FF3838 5px;
+}
+.resultat_score{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
