@@ -9,7 +9,7 @@ class App
     _APP_URL;
     _API;
     constructor(){
-        this._APP_URL = 'http://127.0.0.1:5500/js/data.json';
+        this._APP_URL = '/js/data.json';
         this._API = new Api(this._APP_URL);
     }
     async run(){
