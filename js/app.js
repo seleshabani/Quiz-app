@@ -14,7 +14,8 @@ class App
     }
     async run(){
         let formSubscribe = new FormSubscribe();
-        let questionsDatas = await this._API.get();
+        // let questionsDatas = await this._API.get();
+        let questionsDatas = await this._API.getByImport();
         let questions = [];
         let timer = new Timer();
         questionsDatas.forEach(element => {
