@@ -12,6 +12,8 @@ class FormSubscribe
     _router
     _inptName;
     _inptEmail;
+    _inptNameEl;
+    _inptEmailEl;
     /**
      * 
      * @param {Router} router 
@@ -33,12 +35,17 @@ class FormSubscribe
             this._inptEmail = e.target.email.value
 
             // test du validateur
+            if (FormSubscribeValidator.CheckEmpty(this._inptName)==false ||
+            FormSubscribeValidator.CheckEmpty(this._inptEmail)==false) {
 
-            let user = new User(this._inptName,this._inptEmail);
-            DataStore.saveUser(user);
+                let user = new User(this._inptName,this._inptEmail);
+                DataStore.saveUser(user);
+                quiz.display();
 
-            // appel de la vue pour le quiz (start quiz)
-           quiz.display();
+            }else{
+                alert('formulaire vide')
+            }
+           
         })
     }
 

@@ -32,8 +32,9 @@ class QuizTemplate
         </div>
         <div class="progress_container">
             <label for="">Question ${question.id}/${questionsLen}</label>
-            <progress value="0" max="10" id="pbar" style="background:green;width:100%;"></progress>
+            <progress value="0" max="60" id="pbar" style="background:green;width:90%;"></progress>
         </div>
+        <span id="comptr"></span>
         <form class="reponses_form">
             <div class="reponses_items">
                 ${choices}
@@ -80,7 +81,7 @@ class QuizTemplate
      * @returns 
      */
     static buildResultFailTemplate(score,questionLen,user){
-        console.log(user)
+        //console.log(user)
         return `
             <div class="resultat">
                 <div class="resultat_owner">
