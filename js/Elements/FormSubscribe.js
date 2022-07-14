@@ -34,18 +34,26 @@ class FormSubscribe
             this._inptName = e.target.name.value
             this._inptEmail = e.target.email.value
 
+            let isEmailEmpty = FormSubscribeValidator.CheckEmpty(this._inptEmail);
+            let isNameEmpty = FormSubscribeValidator.CheckEmpty(this._inptName);
+            let IsCorectMAil = FormSubscribeValidator.CheckValidEmail(this._inptEmail);
+            
             // test du validateur
-            if (FormSubscribeValidator.CheckEmpty(this._inptName)==false ||
-            FormSubscribeValidator.CheckEmpty(this._inptEmail)==false) {
 
-                let user = new User(this._inptName,this._inptEmail);
-                DataStore.saveUser(user);
-                quiz.display();
-
+            if (isNameEmpty == false) {
+                FormSubscribeValidator.ShowNameError();
+            }else if(isEmailEmpty == false){
+                FormSubscribeValidator.ShowNameError('email');
             }else{
-                alert('formulaire vide')
+                if (IsCorectMAil) {
+                    let user = new User(this._inptName,this._inptEmail);
+                    DataStore.saveUser(user);
+                    quiz.display();   
+                }else{
+                    FormSubscribeValidator.ShowEmailError();
+                }
             }
-           
+            
         })
     }
 

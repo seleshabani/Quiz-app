@@ -31,10 +31,12 @@ class QuizTemplate
             </p>
         </div>
         <div class="progress_container">
-            <label for="">Question ${question.id}/${questionsLen}</label>
-            <progress value="0" max="60" id="pbar" style="background:green;width:90%;"></progress>
+            <div class="question_len_cmptr">
+                <label for="">Question ${question.id}/${questionsLen}</label>
+                <span id="comptr"></span>
+            </div>
+            <progress value="60" max="60" id="pbar" style="background:green;width:100%;"></progress>
         </div>
-        <span id="comptr"></span>
         <form class="reponses_form">
             <div class="reponses_items">
                 ${choices}

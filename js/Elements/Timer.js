@@ -6,10 +6,10 @@ class Timer
     _htmlCompteur;
     _maxTime;
     _observers = [];
-    _TIME=60;
+    _TIME=0;
     _INTERVAL=1000;
     constructor(){
-        this._maxTime = 0;
+        this._maxTime = 60;
     }
     /**
      * 
@@ -22,11 +22,10 @@ class Timer
 
         let numInt = setInterval(()=>{
 
-            this._htmlProgressElt.value = ++this._maxTime;
+            this._htmlProgressElt.value = --this._maxTime;
             this._htmlCompteur.innerText = this._maxTime;
-            console.log(this._htmlCompteur);
             if (this._maxTime == this._TIME) {
-                this._maxTime=0;
+                this._maxTime=60;
 
                 if (!quiz.isEnded()) {
                     // récupère le choix mm si on a pas cliqué
@@ -48,7 +47,7 @@ class Timer
         for (let i = 1; i < interval_id; i++) {
             window.clearInterval(i);
         }
-        this._maxTime = 0;
+        this._maxTime = 60;
     }
 }
 export default Timer;
