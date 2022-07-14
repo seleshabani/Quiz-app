@@ -13,9 +13,10 @@ class QuizTemplate
         let choices = '';
         question.choices.forEach((choice,index)=> {
             choices += `
-            <div class="reponses__item">
+            <div class="reponses__item" id="reponses__item_rep${index}">
                 <div class="reponses__item__radio">
                     <input type="radio" name="radio" id="rep${index}" value="${choice}">
+                    <span></span>
                 </div>
                 <div class="reponses__item__reponse">
                     <label for="rep${index}">${choice}.</label>
@@ -32,7 +33,7 @@ class QuizTemplate
         </div>
         <div class="progress_container">
             <div class="question_len_cmptr">
-                <label for="">Question ${question.id}/${questionsLen}</label>
+                <span>Question ${question.id}/${questionsLen}</span>
                 <span id="comptr"></span>
             </div>
             <progress value="60" max="60" id="pbar" style="background:green;width:100%;"></progress>

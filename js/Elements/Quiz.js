@@ -65,6 +65,13 @@ class Quiz{
         })
         radiosbtn.forEach(radio=>{
             radio.addEventListener('click',e=>{
+
+                let reponses_items= document.querySelectorAll('.reponses__item');
+                reponses_items.forEach(itm=>itm.style.border = 'solid grey 1px')
+        
+                let id= e.target.id
+                let item_container = document.querySelector(`#reponses__item_${id}`);
+                item_container.style.border = 'solid green 2px';
                 submitBtn.removeAttribute('disabled');
             })
         })
