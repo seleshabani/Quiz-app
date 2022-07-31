@@ -8,19 +8,20 @@
 }
 html{
     font-size: 18px;
+    background: linear-gradient(90deg, #85F6B8 0%, rgba(142, 217, 235, 0.85) 99.84%);
+    background-repeat: repeat;
+    background-size: cover;
 }
 progress{
     border-radius: 10px;
 }
 body{
-    background: linear-gradient(0deg, #85F6B8 100%, #8ED9EBD9 85%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
+    position: relative;
+    height: 100vh;
 }
 h1{
     color: gray;
@@ -52,7 +53,7 @@ label{
     cursor: pointer;
     outline: none;
     border: none;
-    box-shadow: 0px 5px 10px 0px rgb(31, 29, 29);
+    box-shadow: 0px 1px 5px 0px rgb(31, 29, 29);
 }
 .btn.success{
     background-color: green;
@@ -80,8 +81,8 @@ input[type="radio"]{
 }
 
 .white_card{
-    width: 40%;
-    height: 600px;
+    width: 35%;
+    height: 500px;
     background-color: white;
     border-radius: 2px;
     display: flex;
@@ -105,6 +106,16 @@ input[type="radio"]{
     gap: 25px;
     align-items: center;
     align-content: center;
+    font-family: 'Inter';
+    color: #555555;
+}
+.white_card .form_subscribe .form_subscribe_text h1{
+    font-weight: 500;
+}
+.white_card .form_subscribe .form_subscribe_text p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
 }
 .white_card .form_subscribe .form_subscribe_form{
     height: 300px;
@@ -121,10 +132,12 @@ input[type="radio"]{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    bottom: 40px;
 }
 .form_action #form_sub_btn{
     width: 50%;
-    box-shadow: 0px 5px 10px 0px rgb(31, 29, 29);
+    box-shadow: 0px 1px 5px 0px rgb(31, 29, 29);
 }
 .progress_container .question_len_cmptr{
     width: 100%;
@@ -182,7 +195,7 @@ input[type="radio"]{
     display: flex;
     flex-direction: row;
     height: 50px;
-    border: solid grey 1px;
+    border: solid #DDDDDD 1px;
     padding: 5px;
 }
 .reponses_items .reponses__item .reponses__item__radio{
@@ -248,4 +261,8 @@ input[type="radio"]{
 .resultat_score{
     margin-bottom: 20px;
     margin-top: 20px;
+}
+.question_len_cmptr{
+    color: #555555;
+    font-size: 15px;
 }
